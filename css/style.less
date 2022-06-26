@@ -1,0 +1,141 @@
+@cubicBezier: cubic-bezier(.645, .045, .355, 1);
+
+:root {
+    --green:#52b3ae;
+    --fucsia:#e422bf;
+    --white: #e4d0d1;
+}
+
+/* RESET */
+*,*:before,*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    line-height: 1.2em;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
+    font-size: 24px;
+}
+body{
+	font-weight: 400;
+	background-color:var(--white);
+    color: var(--color);
+}
+
+h1,h2,h3,h4,p,ul,ol {
+	display: block;
+	font-size: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+a {
+    color: var(--color);
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+
+ul {
+    margin: 24px 0 32px;
+    padding-left: 24px;
+
+    li {
+        margin-bottom: 8px;
+    }
+}
+
+[hidden] {
+    display: none !important;
+}
+
+[disabled] {
+    pointer-events: none;
+    opacity: .4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.cover {
+    img {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+.episodes {
+    max-width: 600px;
+    width: calc(100% - 32px);
+    margin-top: 32px;
+
+    .episode {
+        background-color: #e431bf;
+        padding: 30px 40px;
+        display: flex;
+        color: #e4d0d1;
+        width: 100%;
+        border-radius: 15px;
+        margin: 15px 0;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: .8rem;
+
+        .episode-number {
+        }
+
+        .episode-title {
+            flex-grow: 1;
+            margin: 0 16px;
+        }
+        .episode-player {
+            opacity: .8;
+            margin: 24px 0 0;
+            width: 100%;
+
+            audio {
+                width: 100%;
+            }
+        }
+    }
+}
+
+footer {
+    font-weight: normal;
+    background-color: #52b2ae;
+    width: 100%;
+    font-size: .6rem;
+    text-align: center;
+    padding: 60px;
+    margin-top: 80px;
+    color: #fff;
+}
+
+@media (max-width: 425px) {
+    .container {
+        padding-top: 0;
+    }
+}
